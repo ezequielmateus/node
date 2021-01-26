@@ -1,15 +1,11 @@
-var express = require("express")();
-express.set("view engine", "ejs");
+var express = require("./config/server");
+var routerNoticia = require("./app/routes/noticias")(express);
+var routerMain = require("./app/routes/index")(express);
+var routerForm = require("./app/routes/formulario_inclusao_noticia")(express);
 
-express.get("/", function(req, res){
-    res.send("<h1>Página principal</h1>");
-})
 
-express.get("/tecnologia", function(req, res){
-    res.send("<h1>Página Tecnologia</h1>");
-})
 express.listen(3000, function(req, res){
-
+    console.log("Servidor Rodando");
 
 });
 
