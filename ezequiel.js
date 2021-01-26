@@ -1,7 +1,10 @@
 var express = require("./config/server");
-var routerNoticia = require("./app/routes/noticias")(express);
-var routerMain = require("./app/routes/index")(express);
-var routerForm = require("./app/routes/formulario_inclusao_noticia")(express);
+
+// var routerNoticia = require("./app/routes/noticias")(express);
+// var routerMain = require("./app/routes/index")(express);
+// var routerForm = require("./app/routes/formulario_inclusao_noticia")(express);
+
+
 
 
 express.listen(3000, function(req, res){
